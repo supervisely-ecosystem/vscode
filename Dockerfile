@@ -8,10 +8,9 @@ COPY settings.json /data/user-data/User/settings.json
 RUN mkdir -p /root/.local/share/code-server/User
 COPY settings.json /root/.local/share/code-server/User/settings.json
 
-RUN mkdir -p /root/.local/share/code-server
-COPY .vscode/extensions /root/.local/share/code-server/extensions
-
-RUN code-server --install-extension ms-python.python
+# RUN mkdir -p /root/.local/share/code-server
+# COPY .vscode/extensions /root/.local/share/code-server/extensions
+# RUN code-server --install-extension ms-python.python
 
 EXPOSE 8080
 CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080"]
