@@ -16,6 +16,9 @@ else
     echo "Directory extensions created: $PLUGINS"
 fi
 
+#@TODO: Pyright
+#@TODO: install plugins
+
 docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
 # docker push supervisely/vscode:0.0.1 && \
 
