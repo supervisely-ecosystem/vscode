@@ -1,5 +1,7 @@
+cp -a /Users/maxim/.vscode .vscode
 docker build -t supervisely/vscode . && \
 docker run --rm -it supervisely/vscode bash
+
 
 # code-server
 
