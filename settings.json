@@ -1,7 +1,7 @@
 {
     "window.autoDetectColorScheme": true,
     "workbench.colorTheme": "GitHub Dark Dimmed",
-    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+    "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.integrated.inheritEnv": false,
