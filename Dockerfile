@@ -12,6 +12,23 @@ COPY settings.json /root/.local/share/code-server/User/settings.json
 # COPY .vscode/extensions /root/.local/share/code-server/extensions
 # RUN code-server --install-extension ms-python.python
 
+# RUN pip install 'python-language-server[all]'
+# Pyright from marketplace
+
+RUN code-server --install-extension mhutchie.git-graph
+RUN code-server --install-extension github.github-vscode-theme
+RUN code-server --install-extension ms-python.python
+RUN code-server --install-extension ecmel.vscode-html-css
+RUN code-server --install-extension ms-toolsai.jupyter
+RUN code-server --install-extension yzhang.markdown-all-in-one
+RUN code-server --install-extension ms-python.vscode-pylance
+RUN code-server --install-extension twixes.pypi-assistant
+RUN code-server --install-extension ms-python.python
+RUN code-server --install-extension formulahendry.terminal
+RUN code-server --install-extension octref.vetur
+RUN code-server --install-extension visualstudioexptteam.vscodeintellicode
+RUN code-server --install-extension emmanuelbeziat.vscode-great-icons
+
 EXPOSE 8080
 CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080"]
 
