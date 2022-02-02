@@ -2,32 +2,34 @@ FROM python:3.8
 
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 
+# COPY product.json /usr/lib/code-server/vendor/modules/code-oss-dev/product.json
+
 RUN mkdir -p /data/user-data/User
 COPY settings.json /data/user-data/User/settings.json
 
 RUN mkdir -p /root/.local/share/code-server/User
 COPY settings.json /root/.local/share/code-server/User/settings.json
 
-# RUN mkdir -p /root/.local/share/code-server
-# COPY .vscode/extensions /root/.local/share/code-server/extensions
+RUN mkdir -p /root/.local/share/code-server
+COPY .vscode/extensions /root/.local/share/code-server/extensions
 # RUN code-server --install-extension ms-python.python
 
 # RUN pip install 'python-language-server[all]'
 # Pyright from marketplace
 
-RUN code-server --install-extension mhutchie.git-graph
-RUN code-server --install-extension github.github-vscode-theme
-RUN code-server --install-extension ms-python.python
-RUN code-server --install-extension ecmel.vscode-html-css
-RUN code-server --install-extension ms-toolsai.jupyter
-RUN code-server --install-extension yzhang.markdown-all-in-one
-RUN code-server --install-extension ms-python.vscode-pylance
-RUN code-server --install-extension twixes.pypi-assistant
-RUN code-server --install-extension ms-python.python
-RUN code-server --install-extension formulahendry.terminal
-RUN code-server --install-extension octref.vetur
-RUN code-server --install-extension visualstudioexptteam.vscodeintellicode
-RUN code-server --install-extension emmanuelbeziat.vscode-great-icons
+# RUN code-server --install-extension mhutchie.git-graph
+# RUN code-server --install-extension github.github-vscode-theme
+# RUN code-server --install-extension ms-python.python
+# RUN code-server --install-extension ecmel.vscode-html-css
+# RUN code-server --install-extension ms-toolsai.jupyter
+# RUN code-server --install-extension yzhang.markdown-all-in-one
+# RUN code-server --install-extension ms-python.vscode-pylance
+# RUN code-server --install-extension twixes.pypi-assistant
+# RUN code-server --install-extension formulahendry.terminal
+# RUN code-server --install-extension octref.vetur
+# RUN code-server --install-extension visualstudioexptteam.vscodeintellicode
+# RUN code-server --install-extension emmanuelbeziat.vscode-great-icons
+
 
 EXPOSE 8080
 CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080"]
