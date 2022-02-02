@@ -18,6 +18,7 @@ fi
 
 #@TODO: Pyright
 #@TODO: install plugins
+#@TODO
 
 docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
 # docker push supervisely/vscode:0.0.1 && \
