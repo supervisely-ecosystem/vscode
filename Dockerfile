@@ -6,6 +6,9 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN mkdir -p /data/user-data/User
 COPY settings.json /data/user-data/User/settings.json
 
+RUN mkdir -p /root/.local/share/code-server/User
+COPY settings.json /root/.local/share/code-server/User/settings.json
+
 RUN mkdir -p /root/.local/share/code-server
 COPY .vscode/extensions /root/.local/share/code-server/extensions
 
