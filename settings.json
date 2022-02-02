@@ -1,13 +1,12 @@
 {
     "window.autoDetectColorScheme": true,
     "workbench.colorTheme": "GitHub Dark Dimmed",
-    "workbench.preferredDarkColorTheme": "GitHub Dark Dimmed",
+    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "terminal.integrated.inheritEnv": false,
     "git.confirmSync": false,
     "workbench.iconTheme": "vscode-great-icons",
-    "vsicons.dontShowNewVersionMessage": true,
     "git.pruneOnFetch": true,
     "terminal.integrated.commandsToSkipShell": [
         "workbench.action.terminal.sizeToContentWidth"
@@ -16,4 +15,5 @@
     "git-graph.repository.fetchAndPrune": true,
     "git-graph.repository.fetchAndPruneTags": true,
     "editor.unicodeHighlight.ambiguousCharacters": false,
+    "python.languageServer": "Pylance"
 }
