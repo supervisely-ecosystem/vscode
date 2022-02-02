@@ -26,7 +26,11 @@ docker run --rm -it -p 3000:8080 supervisely/vscode:0.0.1
 
 #@TODO: https://github.com/palantir/python-language-server
 
-# docker run -it --init -p 3000:3000 gitpod/openvscode-server
+# docker run -it --init -p 4000:4000 gitpod/openvscode-server
 
 
 # https://www.reddit.com/r/linux/comments/k0s8qw/vs_code_developers_prevent_running_the_new/
+# https://github.com/microsoft/pyright
+
+
+
