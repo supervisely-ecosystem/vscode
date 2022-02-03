@@ -15,3 +15,8 @@ docker run --rm -it -p 8000:8000 supervisely/vscode:0.0.1
 # prepare venv
 # disable get started page
 # launch.json - create venv
+
+# modal window - empty git repo
+# git ssh token for single repo
+# how to github login in terminal
+# vscode "github login" plugin https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github
