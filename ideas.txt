@@ -4,6 +4,7 @@
 https://github.com/psf/black
 https://code.visualstudio.com/docs/python/linting
 https://stackoverflow.com/questions/65410758/problem-formatting-python-when-using-prettier-in-vscode
+https://github.com/works-on-my-machine/pytorch-code-server
 
 дву двух словах тебе надо добавить в докер файл
 # Install nginx
