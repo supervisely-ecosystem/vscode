@@ -9,8 +9,7 @@ docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
 docker run --rm -it -p 8000:8000 supervisely/vscode:0.0.1
 
 
-#@TODO:
-# 
+#@TODO: 
 # vscode on /, app on /app (- / - return 200) + change uvicorn config
 # remove files 
 # prepare venv
