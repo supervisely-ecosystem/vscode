@@ -14,3 +14,4 @@ docker run --rm -it -p 8000:8000 supervisely/vscode:0.0.1
 # remove files 
 # prepare venv
 # disable get started page
+# launch.json - create venv
