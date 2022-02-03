@@ -9,9 +9,12 @@
             "args": [
                 "main:app",
                 "--host",
-                "localhost",
+                "0.0.0.0",
                 "--port",
-                "6000"
+                "6000",
+                "--debug",
+                "--ws",
+                "websockets"
             ],
             "jinja": true
         }

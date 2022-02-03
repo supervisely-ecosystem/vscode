@@ -6,7 +6,6 @@ from supervisely.fastapi_helpers import get_subapp, Jinja2Templates
 from supervisely.fastapi_helpers import StateJson, DataJson, LastStateJson, ContextJson
 
 
-
 # init state and data (singletons)
 LastStateJson({})
 DataJson({"name": "<empty>"})

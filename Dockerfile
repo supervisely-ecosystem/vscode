@@ -39,8 +39,9 @@ RUN rm /etc/nginx/sites-enabled/default
 #############################################################################
 
 RUN apt-get install -y python3-opencv
-# RUN pip3 install supervisely
-RUN pip3 install --no-cache supervisely==6.7.0
+RUN pip3 install virtualenv 
+# RUN pip3 install supervisely==6.7.0
+RUN pip3 install https://files.pythonhosted.org/packages/9f/37/f196767656c48b99c274294477da4807f460d6d2360e3dd1c9881b80eb1c/supervisely-6.7.0-py3-none-any.whl
 
 #############################################################################
 ##### Configuration
