@@ -1,21 +1,26 @@
 FROM python:3.8
 
-RUN curl -fsSL https://code-server.dev/install.sh | sh
+RUN apt-get update
+RUN apt-get install -y libopencv-dev python3-opencv
+# RUN pip install opencv-python==4.5.5.62
+RUN pip install supervisely==6.6.3
+
+# RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+
+
 
 # COPY product.json /usr/lib/code-server/vendor/modules/code-oss-dev/product.json
 
-RUN mkdir -p /data/user-data/User
-COPY settings.json /data/user-data/User/settings.json
+# RUN mkdir -p /data/user-data/User
+# COPY settings.json /data/user-data/User/settings.json
 
-RUN mkdir -p /root/.local/share/code-server/User
-COPY settings.json /root/.local/share/code-server/User/settings.json
+# RUN mkdir -p /root/.local/share/code-server/User
+# COPY settings.json /root/.local/share/code-server/User/settings.json
 
-RUN mkdir -p /root/.local/share/code-server
-COPY .vscode/extensions /root/.local/share/code-server/extensions
+# RUN mkdir -p /root/.local/share/code-server
+# COPY .vscode/extensions /root/.local/share/code-server/extensions
 # RUN code-server --install-extension ms-python.python
-
-# RUN pip install 'python-language-server[all]'
-# Pyright from marketplace
 
 # RUN code-server --install-extension mhutchie.git-graph
 # RUN code-server --install-extension github.github-vscode-theme
