@@ -15,6 +15,7 @@ RUN code-server --install-extension ecmel.vscode-html-css
 RUN code-server --install-extension yzhang.markdown-all-in-one
 RUN code-server --install-extension octref.vetur
 RUN code-server --install-extension emmanuelbeziat.vscode-great-icons
+RUN code-server --install-extension ms-pyright.pyright
 
 # already installed
 # RUN code-server --install-extension ms-toolsai.jupyter
@@ -28,11 +29,6 @@ COPY .vscode/manual_extensions /root/.local/share/code-server/extensions
 # RUN code-server --install-extension twixes.pypi-assistant
 # RUN code-server --install-extension formulahendry.terminal
 
-RUN mkdir -p /data/user-data/User
-COPY settings.json /data/user-data/User/settings.json
-
-RUN mkdir -p /root/.local/share/code-server/User
-COPY settings.json /root/.local/share/code-server/User/settings.json
 
 
 #############################################################################
@@ -43,8 +39,12 @@ RUN apt-get update
 RUN apt-get install -y python3-opencv
 RUN pip3 install supervisely==6.6.3
 
-RUN code-server --install-extension ms-pyright.pyright
 
+
+RUN mkdir -p /data/user-data/User
+COPY settings.json /data/user-data/User/settings.json
+RUN mkdir -p /root/.local/share/code-server/User
+COPY settings.json /root/.local/share/code-server/User/settings.json
 COPY demo /demo
 
 EXPOSE 8080
