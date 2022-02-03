@@ -39,8 +39,7 @@ RUN rm /etc/nginx/sites-enabled/default
 #############################################################################
 
 RUN apt-get install -y python3-opencv
-RUN pip3 install supervisely==6.6.3
-
+RUN pip3 install supervisely==6.7.0
 
 #############################################################################
 ##### Configuration
@@ -55,6 +54,8 @@ COPY .vscode_for_docker/manual_extensions /root/.local/share/code-server/extensi
 
 RUN mkdir -p /root/.local/share/code-server/User
 COPY settings.json /root/.local/share/code-server/User/settings.json
+COPY entrypoint.sh /entrypoint.sh  
+
 COPY demo /workdir
 
-ENTRYPOINT ["/workdir/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
