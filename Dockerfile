@@ -39,10 +39,9 @@ COPY settings.json /root/.local/share/code-server/User/settings.json
 ##### OpenCV and Supervisely with dependencies
 #############################################################################
 
-# RUN apt-get update
-# RUN apt-get install -y libopencv-dev python3-opencv
-# # RUN pip install opencv-python==4.5.5.62
-# RUN pip install supervisely==6.6.3
+RUN apt-get update
+RUN apt-get install -y python3-opencv
+RUN pip3 install supervisely==6.6.3
 
 EXPOSE 8080
 CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080"]
