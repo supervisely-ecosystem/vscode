@@ -16,19 +16,11 @@ RUN code-server --install-extension yzhang.markdown-all-in-one
 RUN code-server --install-extension octref.vetur
 RUN code-server --install-extension emmanuelbeziat.vscode-great-icons
 RUN code-server --install-extension ms-pyright.pyright
-
 # already installed
 # RUN code-server --install-extension ms-toolsai.jupyter
-
 # not supported
 # RUN code-server --install-extension ms-python.vscode-pylance
 # RUN code-server --install-extension visualstudioexptteam.vscodeintellicode
-
-# manual copy from local folder
-COPY .vscode/manual_extensions /root/.local/share/code-server/extensions
-# RUN code-server --install-extension twixes.pypi-assistant
-# RUN code-server --install-extension formulahendry.terminal
-
 
 
 #############################################################################
@@ -39,7 +31,10 @@ RUN apt-get update
 RUN apt-get install -y python3-opencv
 RUN pip3 install supervisely==6.6.3
 
-
+COPY .vscode/manual_extensions /root/.local/share/code-server/extensions
+# manual copy from local folder
+# RUN code-server --install-extension twixes.pypi-assistant
+# RUN code-server --install-extension formulahendry.terminal
 
 RUN mkdir -p /data/user-data/User
 COPY settings.json /data/user-data/User/settings.json
