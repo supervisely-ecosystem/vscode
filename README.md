@@ -6,19 +6,6 @@
 
 
 
-- vscode (local)
-- vscode (web: _product.json, pyright, https://github.com/pappasam/jedi-language-server, )
-- https://vscodium.com/
-- https://www.tabnine.com/
-- https://github.com/palantir/python-language-server
-- https://github.com/python-lsp/python-lsp-server
-- https://www.pydev.org/vscode/index.html
-- https://github.com/python/mypy
-- https://github.com/pappasam/jedi-language-server
-- https://gist.github.com/raveenb/c0001484a79214c21785227d0688f57f
-
-
-
 
 
 дву двух словах тебе надо добавить в докер файл
@@ -63,3 +50,24 @@ server {
     }
 }
 ну и это будет делать localhost:8000/vscode -> localhost:5000 (vscode стартуй на порте 5000) и localhost:8000/ -> localhost:6000 (main.py стартуй на порте 6000)
+
+
+- vscode (local)
+- vscode (web: _product.json, pyright, https://github.com/pappasam/jedi-language-server, )
+- https://vscodium.com/
+- https://www.tabnine.com/
+- https://github.com/palantir/python-language-server
+- https://github.com/python-lsp/python-lsp-server
+- https://www.pydev.org/vscode/index.html
+- https://github.com/python/mypy
+- https://github.com/pappasam/jedi-language-server
+- https://gist.github.com/raveenb/c0001484a79214c21785227d0688f57f
+
+
+#@TODO: https://github.com/palantir/python-language-server
+
+# docker run -it --init -p 4000:4000 gitpod/openvscode-server
+
+
+# https://www.reddit.com/r/linux/comments/k0s8qw/vs_code_developers_prevent_running_the_new/
+# https://github.com/microsoft/pyright
