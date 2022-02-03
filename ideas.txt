@@ -1,10 +1,9 @@
 #@TODO: Pyright
 #@TODO: install plugins
 #@TODO: expose multiple ports - use nginx
-
+https://github.com/psf/black
 https://code.visualstudio.com/docs/python/linting
-
-
+https://stackoverflow.com/questions/65410758/problem-formatting-python-when-using-prettier-in-vscode
 
 дву двух словах тебе надо добавить в докер файл
 # Install nginx

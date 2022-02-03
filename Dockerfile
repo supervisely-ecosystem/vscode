@@ -43,5 +43,9 @@ RUN apt-get update
 RUN apt-get install -y python3-opencv
 RUN pip3 install supervisely==6.6.3
 
+RUN code-server --install-extension ms-pyright.pyright
+
+COPY demo /demo
+
 EXPOSE 8080
-CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080"]
+CMD ["code-server", "--auth", "none", "--bind-addr", "0.0.0.0:8080", "/demo"]
