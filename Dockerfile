@@ -39,7 +39,8 @@ RUN rm /etc/nginx/sites-enabled/default
 #############################################################################
 
 RUN apt-get install -y python3-opencv
-RUN pip3 install supervisely==6.7.0
+# RUN pip3 install supervisely
+RUN pip3 install --no-cache supervisely==6.7.0
 
 #############################################################################
 ##### Configuration
