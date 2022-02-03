@@ -1,22 +1,16 @@
 {
-    "window.autoDetectColorScheme": true,
     "workbench.colorTheme": "GitHub Dark Dimmed",
-    "workbench.preferredDarkColorTheme": "Visual Studio Dark",
-    "editor.suggestSelection": "first",
-    // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "vscode-great-icons",
     "terminal.integrated.inheritEnv": false,
     "git.confirmSync": false,
-    "workbench.iconTheme": "vscode-great-icons",
     "git.pruneOnFetch": true,
-    "terminal.integrated.commandsToSkipShell": [
-        "workbench.action.terminal.sizeToContentWidth"
-    ],
     "git-graph.dialog.fetchRemote.prune": true,
     "git-graph.repository.fetchAndPrune": true,
     "git-graph.repository.fetchAndPruneTags": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.terminal.sizeToContentWidth"
+    ],
     "editor.unicodeHighlight.ambiguousCharacters": false,
-    // "___python.languageServer": "Pylance"
-    
     "python.pythonPath": "/usr/local/bin/python3",
     "code-runner.executorMap.python": "python3 -u"
 }

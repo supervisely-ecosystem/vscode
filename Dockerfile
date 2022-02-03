@@ -44,8 +44,8 @@ COPY nginx-default.conf /etc/nginx/conf.d/default.conf
 COPY .vscode_for_docker/manual_extensions /root/.local/share/code-server/extensions
 # RUN code-server --install-extension twixes.pypi-assistant
 # RUN code-server --install-extension formulahendry.terminal
-RUN mkdir -p /data/user-data/User
-COPY settings.json /data/user-data/User/settings.json
+# RUN mkdir -p /data/user-data/User
+# COPY settings.json /data/user-data/User/settings.json
 RUN mkdir -p /root/.local/share/code-server/User
 COPY settings.json /root/.local/share/code-server/User/settings.json
 # COPY demo /demo
