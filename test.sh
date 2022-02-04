@@ -19,3 +19,6 @@ docker push supervisely/vscode:0.0.1
 
 #@TODO: 
 # modal window - simplify github integration
+# github tab - try connect github account (doesnt work)
+# if remove agent tocken from app container env
+# dont allow to run some apps on our agents in community
