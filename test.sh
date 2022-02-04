@@ -16,13 +16,7 @@ docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
 docker run --rm -it -p 8000:8000 supervisely/vscode:0.0.1
 # -v $PWD/demo:/workdir \
 
-
-
 #@TODO: 
-# vscode on /, app on /app (- / - return 200) + change uvicorn config
-# prepare venv
-# launch.json - create venv
-
 # modal window - empty git repo
 # git ssh token for single repo
 # how to github login in terminal
