@@ -60,7 +60,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 # color terminal
 RUN echo 'export LS_OPTIONS="--color=auto"' >> ~/.bashrc
-RUN echo 'eval "$(dircolors)"' >> ~/.bashrc
+# RUN echo 'eval "$(dircolors)"' >> ~/.bashrc
 RUN echo 'alias ls="ls $LS_OPTIONS"' >> ~/.bashrc
 RUN echo 'alias ll="ls $LS_OPTIONS -l"' >> ~/.bashrc
 RUN echo 'alias l="ls $LS_OPTIONS -lA"' >> ~/.bashrc

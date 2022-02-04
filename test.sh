@@ -9,13 +9,9 @@ docker run --rm -it -p 8000:8000 -v $PWD/demo:/workdir supervisely/vscode:0.0.1
 # docker run --rm -it --entrypoint="" supervisely/vscode:0.0.1 bash
 
 
-# docker run --rm -it -p 8000:8000 -v $PWD/demo:/workdir -e "TERM=xterm-256color" supervisely/vscode:0.0.1
-
-
 #@TODO: 
 # vscode on /, app on /app (- / - return 200) + change uvicorn config
 # prepare venv
-# disable get started page
 # launch.json - create venv
 
 # modal window - empty git repo
