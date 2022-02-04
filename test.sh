@@ -27,3 +27,5 @@ docker run --rm -it -p 8000:8000 \
 # github tab - try connect github account (doesnt work)
 # if remove agent tocken from app container env
 # dont allow to run some apps on our agents in community
+# nginx w + w/o ///////?????
+# nginx silent mode
