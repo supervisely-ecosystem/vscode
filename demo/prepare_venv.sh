@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ -d "venv" ]; then
     echo "VENV already exists, will be removed"
     rm -rf venv

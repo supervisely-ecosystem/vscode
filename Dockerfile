@@ -40,8 +40,17 @@ RUN rm /etc/nginx/sites-enabled/default
 
 RUN apt-get install -y python3-opencv
 RUN pip3 install virtualenv 
-# RUN pip3 install supervisely==6.7.0
-RUN pip3 install https://files.pythonhosted.org/packages/9f/37/f196767656c48b99c274294477da4807f460d6d2360e3dd1c9881b80eb1c/supervisely-6.7.0-py3-none-any.whl
+RUN pip3 install supervisely==6.7.0
+# RUN pip3 install https://files.pythonhosted.org/packages/9f/37/f196767656c48b99c274294477da4807f460d6d2360e3dd1c9881b80eb1c/supervisely-6.7.0-py3-none-any.whl
+
+#############################################################################
+##### Demo project
+#############################################################################
+
+COPY demo /workdir
+WORKDIR /workdir
+
+RUN ./prepare_venv.sh
 
 #############################################################################
 ##### Configuration
@@ -65,6 +74,5 @@ RUN echo 'alias ls="ls $LS_OPTIONS"' >> ~/.bashrc
 RUN echo 'alias ll="ls $LS_OPTIONS -l"' >> ~/.bashrc
 RUN echo 'alias l="ls $LS_OPTIONS -lA"' >> ~/.bashrc
 
-COPY demo /workdir
 
 ENTRYPOINT ["/entrypoint.sh"]
