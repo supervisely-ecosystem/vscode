@@ -58,6 +58,8 @@ RUN mkdir -p /root/.local/share/code-server/User
 COPY settings.json /root/.local/share/code-server/User/settings.json
 COPY entrypoint.sh /entrypoint.sh  
 
+RUN echo 'alias ll="ls -al"' >> ~/.bashrc 
+
 COPY demo /workdir
 
 ENTRYPOINT ["/entrypoint.sh"]

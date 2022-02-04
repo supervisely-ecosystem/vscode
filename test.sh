@@ -3,10 +3,10 @@ docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
 
 # -p <host port>:<container port>
 # docker run --rm -it -p 3000:8000 -v $PWD/demo:/workdir supervisely/vscode:0.0.1
-# docker run --rm -it --entrypoint="" supervisely/vscode:0.0.1 bash
+docker run --rm -it --entrypoint="" -e "TERM=xterm-256color" supervisely/vscode:0.0.1 bash
 
 
-docker run --rm -it -p 8000:8000 -v $PWD/demo:/workdir supervisely/vscode:0.0.1
+# docker run --rm -it -p 8000:8000 -v $PWD/demo:/workdir -e "TERM=xterm-256color" supervisely/vscode:0.0.1
 
 
 #@TODO: 
