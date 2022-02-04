@@ -10,5 +10,8 @@
     "terminal.integrated.commandsToSkipShell": [
         "workbench.action.terminal.sizeToContentWidth"
     ],
-    "editor.unicodeHighlight.ambiguousCharacters": false
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "workbench.startupEditor": "None",
+    "python.pythonPath": "/usr/local/bin/python3",
+    "code-runner.executorMap.python": "python3 -u"
 }

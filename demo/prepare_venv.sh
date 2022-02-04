@@ -5,7 +5,7 @@ if [ -d "$DIR" ]; then
 fi
 
 echo "VENV will be created"
-python3 -m venv $DIR && \
-source venv/bin/activate && \
-pip3 install -r requirements.txt && \
-deactivate
+python3 -m venv $DIR
+source venv/bin/activate
+pip3 install -r requirements.txt
+# deactivate

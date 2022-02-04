@@ -7,16 +7,12 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "main:app",
-                "--host",
-                "0.0.0.0",
-                "--port",
-                "6000",
-                "--root-path", 
-                "/app",
+                "src.main:app",
+                "--host", "0.0.0.0",
+                "--port", "6000",
+                "--root-path", "/app",
                 "--debug",
-                "--ws",
-                "websockets"
+                "--ws", "websockets"
             ],
             "jinja": true
         }
