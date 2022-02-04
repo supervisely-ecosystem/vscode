@@ -47,14 +47,20 @@ RUN pip3 install supervisely==6.7.0
 ##### Demo project
 #############################################################################
 
-COPY demo /workdir
+RUN mkdir -p /workdir
+COPY demo/requirements.txt /workdir/requirements.txt
+COPY demo/prepare_venv.sh /workdir/prepare_venv.sh
 WORKDIR /workdir
-
 RUN ./prepare_venv.sh
 
 #############################################################################
 ##### Configuration
 #############################################################################
+
+RUN code-server --install-extension GitHub.vscode-pull-request-github
+
+
+COPY demo /workdir
 
 COPY nginx-default.conf /etc/nginx/conf.d/default.conf
 
