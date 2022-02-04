@@ -56,7 +56,12 @@ RUN ./prepare_venv.sh
 #############################################################################
 ##### Configuration
 #############################################################################
-RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+# Authorize SSH Host
+RUN mkdir -p /root/.ssh && \
+    chmod 0700 /root/.ssh && \
+    ssh-keyscan github.com >> ~/.ssh/known_hosts
+# RUN touch /root/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 COPY demo /workdir
 

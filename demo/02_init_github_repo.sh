@@ -1,6 +1,12 @@
 #!/bin/bash
 # usage: ./02_init_github_repo.sh git@github.com:my-organization/my-repo.git
 
+if [ $# -eq 0 ]
+  then
+    echo "repository SSH URL is not ptovided"
+    exit
+fi
+
 REPO=$1
 
 git config --global user.email "$USER_LOGIN-$TASK_ID@example.com"

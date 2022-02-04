@@ -5,7 +5,6 @@ docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
 # docker push supervisely/vscode:0.0.1 
 
 docker run --rm -it -p 8000:8000 \
-    -v $PWD/demo:/workdir \
     --env USER_LOGIN=max \
     --env TASK_ID=777 \
     --entrypoint="" \
@@ -15,6 +14,8 @@ docker run --rm -it -p 8000:8000 \
 #     --env USER_LOGIN=max \
 #     --env TASK_ID=777 \
 #     supervisely/vscode:0.0.1
+
+# -v $PWD/demo:/workdir \
 
 #@TODO: 
 # modal window - empty git repo
