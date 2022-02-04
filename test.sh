@@ -18,6 +18,7 @@ docker push supervisely/vscode:0.0.1
 # -v $PWD/demo:/workdir \
 
 #@TODO: 
+# esbenp.prettier-vscode
 # todo: create startpage
 # modal window - simplify github integration
 # github tab - try connect github account (doesnt work)
