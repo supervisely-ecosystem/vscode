@@ -18,6 +18,7 @@ docker push supervisely/vscode:0.0.1
 # -v $PWD/demo:/workdir \
 
 #@TODO: 
+# todo: create startpage
 # modal window - simplify github integration
 # github tab - try connect github account (doesnt work)
 # if remove agent tocken from app container env
