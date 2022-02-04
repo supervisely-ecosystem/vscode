@@ -56,9 +56,7 @@ RUN ./prepare_venv.sh
 #############################################################################
 ##### Configuration
 #############################################################################
-
-RUN code-server --install-extension GitHub.vscode-pull-request-github
-
+RUN ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 COPY demo /workdir
 

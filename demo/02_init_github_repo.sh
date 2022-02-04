@@ -7,7 +7,6 @@ git config --global user.email "$USER_LOGIN-$TASK_ID@example.com"
 git config --global user.name "$USER_LOGIN"
 git config --global init.defaultBranch "main"
 
-ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 git init && \
 git add . && \
