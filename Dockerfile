@@ -47,14 +47,23 @@ RUN pip3 install supervisely==6.7.0
 ##### Demo project
 #############################################################################
 
-COPY demo /workdir
+RUN mkdir -p /workdir
+COPY demo/requirements.txt /workdir/requirements.txt
+COPY demo/prepare_venv.sh /workdir/prepare_venv.sh
 WORKDIR /workdir
-
 RUN ./prepare_venv.sh
 
 #############################################################################
 ##### Configuration
 #############################################################################
+
+# Authorize SSH Host
+RUN mkdir -p /root/.ssh && \
+    chmod 0700 /root/.ssh && \
+    ssh-keyscan github.com >> ~/.ssh/known_hosts
+# RUN touch /root/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+COPY demo /workdir
 
 COPY nginx-default.conf /etc/nginx/conf.d/default.conf
 
