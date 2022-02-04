@@ -58,7 +58,12 @@ RUN mkdir -p /root/.local/share/code-server/User
 COPY settings.json /root/.local/share/code-server/User/settings.json
 COPY entrypoint.sh /entrypoint.sh  
 
-RUN echo 'alias ll="ls -al"' >> ~/.bashrc 
+# color terminal
+RUN echo 'export LS_OPTIONS="--color=auto"' >> ~/.bashrc
+RUN echo 'eval "$(dircolors)"' >> ~/.bashrc
+RUN echo 'alias ls="ls $LS_OPTIONS"' >> ~/.bashrc
+RUN echo 'alias ll="ls $LS_OPTIONS -l"' >> ~/.bashrc
+RUN echo 'alias l="ls $LS_OPTIONS -lA"' >> ~/.bashrc
 
 COPY demo /workdir
 
