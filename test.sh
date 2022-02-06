@@ -1,7 +1,7 @@
 # [ -d "./demo/venv" ] && rm -rf ./demo/venv
 # [ -d "./demo/__pycache__" ] && rm -rf ./demo/__pycache__
 
-# docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
+docker build --progress=plain -t supervisely/vscode:0.0.1 . && \
 # docker push supervisely/vscode:0.0.1 
 
 # docker run --rm -it -p 8000:8000 \
