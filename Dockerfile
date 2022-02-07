@@ -31,7 +31,7 @@ RUN code-server --install-extension octref.vetur
 RUN code-server --install-extension emmanuelbeziat.vscode-great-icons
 RUN code-server --install-extension ms-pyright.pyright
 RUN code-server --install-extension esbenp.prettier-vscode
-RUN code-server --install-extension TabNine.tabnine-vscode
+# RUN code-server --install-extension TabNine.tabnine-vscode
 
 #############################################################################
 ##### OpenCV and Supervisely with dependencies
