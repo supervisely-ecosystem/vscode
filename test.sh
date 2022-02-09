@@ -16,3 +16,9 @@ docker push supervisely/vscode:0.0.1
 #     supervisely/vscode:0.0.1
 
 # -v $PWD/demo:/workdir \
+
+
+
+#@TODO: 
+# - use base py sdk
+# -  
