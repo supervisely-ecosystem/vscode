@@ -1,3 +1,26 @@
+# all widgets in dict
+# https://mypy.readthedocs.io/en/latest/more_types.html#typeddict
+
+# d = {"a": app, "b": sly.Annotation([1, 1])}
+# d["a"].api_route  # no autocompletion
+
+# from prodict import Prodict
+
+# j = Prodict()
+# j.a = app
+# j.b = sly.Annotation([1, 1])
+# j.a.api_route  # with autocompletion
+
+# language server protocol
+# https://microsoft.github.io/language-server-protocol/implementors/servers/
+# https://www.pydev.org/vscode/index.html
+# https://github.com/palantir/python-language-server
+# https://github.com/python-lsp/python-lsp-server
+# https://github.com/python-lsp/python-lsp-server
+# https://github.com/Microsoft/python-language-server
+
+Black
+
 #@TODO: Pyright
 #@TODO: install plugins
 #@TODO: expose multiple ports - use nginx
