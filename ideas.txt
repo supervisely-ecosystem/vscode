@@ -1,3 +1,5 @@
+https://pydantic-docs.helpmanual.io/visual_studio_code/
+
 # all widgets in dict
 # https://mypy.readthedocs.io/en/latest/more_types.html#typeddict
 
