@@ -1,15 +1,16 @@
 {
-    "name": "VS Code",
-    "type": "app",
-    "version": "2.0.0",
-    "categories": [
-      "development"
-    ],
-    "description": "Develop supervisely apps using VS Code in the browser",
-    "docker_image": "supervisely/vscode:0.0.1",
-    "entrypoint": "bash /entrypoint.sh",
-    "port": 8000, 
-    "task_location": "application_sessions",
-    "icon": "https://img.icons8.com/color/144/000000/visual-studio-code-2019.png",
-    "icon_background": "#FFFFFF"
-  }
+  "name": "VS Code",
+  "type": "app",
+  "version": "2.0.0",
+  "categories": [
+    "development"
+  ],
+  "description": "Develop supervisely apps using VS Code in the browser",
+  "docker_image": "supervisely/vscode:0.0.1",
+  "entrypoint": "bash /entrypoint.sh",
+  "port": 8000,
+  "task_location": "application_sessions",
+  "icon": "https://img.icons8.com/color/144/000000/visual-studio-code-2019.png",
+  "icon_background": "#FFFFFF",
+  "community_agent": false
+}
