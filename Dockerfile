@@ -50,6 +50,7 @@ RUN pip3 install supervisely==6.7.0
 RUN mkdir -p /workdir
 COPY demo/requirements.txt /workdir/requirements.txt
 COPY demo/prepare_venv.sh /workdir/prepare_venv.sh
+COPY init_terminal.sh /workdir/init_terminal.sh
 WORKDIR /workdir
 RUN ./prepare_venv.sh
 
@@ -82,6 +83,11 @@ RUN echo 'export LS_OPTIONS="--color=auto"' >> ~/.bashrc
 RUN echo 'alias ls="ls $LS_OPTIONS"' >> ~/.bashrc
 RUN echo 'alias ll="ls $LS_OPTIONS -l"' >> ~/.bashrc
 RUN echo 'alias l="ls $LS_OPTIONS -lA"' >> ~/.bashrc
+
+run echo 'if [[ -n $SH_INIT_COMMAND ]]; then \
+    echo "Running: $SH_INIT_COMMAND" \
+    eval "$SH_INIT_COMMAND" \
+fi' >> ~/.bashrc
 
 
 ENTRYPOINT ["/entrypoint.sh"]
