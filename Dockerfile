@@ -84,7 +84,7 @@ RUN echo 'alias ls="ls $LS_OPTIONS"' >> ~/.bashrc
 RUN echo 'alias ll="ls $LS_OPTIONS -l"' >> ~/.bashrc
 RUN echo 'alias l="ls $LS_OPTIONS -lA"' >> ~/.bashrc
 
-run echo 'if [[ -n $SH_INIT_COMMAND ]]; then \
+RUN echo 'if [[ -n $SH_INIT_COMMAND ]]; then \
     echo "Running: $SH_INIT_COMMAND" \
     eval "$SH_INIT_COMMAND" \
 fi' >> ~/.bashrc
