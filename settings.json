@@ -12,9 +12,10 @@
     ],
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "workbench.startupEditor": "None",
-    "python.pythonPath": "/usr/local/bin/python3",
-    "terminal.integrated.env.linux": {
-        "SH_INIT_COMMAND": "source init_terminal.sh"
-    },
-    "code-runner.executorMap.python": "python3 -u"
+    "workbench.panel.opensMaximized": "always",
+    "workbench.editor.showTabs": false,
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": false,
+    "security.workspace.trust.enabled": false,
+    "task.allowAutomaticTasks": "on"
 }

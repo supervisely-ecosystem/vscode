@@ -28,7 +28,7 @@ RUN code-server --install-extension ms-pyright.pyright
 #############################################################################
 
 RUN apt-get update -y \
-    && apt-get install -y nginx \
+    && apt-get install -y nginx htop \
     && apt-get clean \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
@@ -48,11 +48,11 @@ RUN pip3 install supervisely==6.7.0
 #############################################################################
 
 RUN mkdir -p /workdir
-COPY demo/requirements.txt /workdir/requirements.txt
-COPY demo/prepare_venv.sh /workdir/prepare_venv.sh
-COPY init_terminal.sh /workdir/init_terminal.sh
+# COPY demo/requirements.txt /workdir/requirements.txt
+# COPY demo/prepare_venv.sh /workdir/prepare_venv.sh
+# COPY init_terminal.sh /workdir/init_terminal.sh
 WORKDIR /workdir
-RUN ./prepare_venv.sh
+# RUN ./prepare_venv.sh
 
 #############################################################################
 ##### Configuration
@@ -64,18 +64,19 @@ RUN mkdir -p /root/.ssh && \
     ssh-keyscan github.com >> ~/.ssh/known_hosts
 # RUN touch /root/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-COPY demo /workdir
+# COPY demo /workdir
 
 COPY nginx-default.conf /etc/nginx/conf.d/default.conf
 
 # manual copy from local folder
-COPY .vscode_for_docker/manual_extensions /root/.local/share/code-server/extensions
+# COPY .vscode_for_docker/manual_extensions /root/.local/share/code-server/extensions
 # RUN code-server --install-extension twixes.pypi-assistant
 # RUN code-server --install-extension formulahendry.terminal
 
 RUN mkdir -p /root/.local/share/code-server/User
 COPY settings.json /root/.local/share/code-server/User/settings.json
 COPY entrypoint.sh /entrypoint.sh  
+COPY tasks.json /workdir/.vscode/tasks.json
 
 # color terminal
 RUN echo 'export LS_OPTIONS="--color=auto"' >> ~/.bashrc
@@ -84,10 +85,10 @@ RUN echo 'alias ls="ls $LS_OPTIONS"' >> ~/.bashrc
 RUN echo 'alias ll="ls $LS_OPTIONS -l"' >> ~/.bashrc
 RUN echo 'alias l="ls $LS_OPTIONS -lA"' >> ~/.bashrc
 
-RUN echo 'if [[ -n $SH_INIT_COMMAND ]]; then \
-    echo "Running: $SH_INIT_COMMAND" \
-    eval "$SH_INIT_COMMAND" \
-fi' >> ~/.bashrc
+# RUN echo 'if [[ -n $SH_INIT_COMMAND ]]; then\n \
+#     echo "Running: $SH_INIT_COMMAND"\n \
+#     eval "$SH_INIT_COMMAND"\n \
+# fi' >> ~/.bashrc
 
 
 ENTRYPOINT ["/entrypoint.sh"]

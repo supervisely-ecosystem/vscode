@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Create terminals",
+      "dependsOn": [
+        "close sidebar",
+        "htop"
+      ],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "close sidebar",
+      "command": "${command:workbench.action.closeSidebar}"
+    },
+    {
+      "label": "htop",
+      "type": "shell",
+      "command": "htop",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "echo": true,
+        "focus": true,
+        "reveal": "always",
+        "showReuseMessage": true,
+        "panel": "shared"
+      }
+    }
+  ]
+}
