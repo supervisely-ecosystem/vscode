@@ -10,7 +10,7 @@
   "entrypoint": "bash /entrypoint.sh",
   "port": 8000,
   "task_location": "application_sessions",
-  "icon": "https://img.icons8.com/color/144/000000/visual-studio-code-2019.png",
+  "icon": "https://github.com/supervisely-ecosystem/vscode/assets/48245050/738f209c-9cf8-4ab4-a0fd-e28973cd80bb",
   "icon_background": "#FFFFFF",
   "community_agent": false
 }
